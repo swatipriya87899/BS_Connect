@@ -20,7 +20,7 @@ const Searchbox = ({title}) => {
       <TextInput
         style={styles.searchbox}
         placeholder={title}
-        value={input}></TextInput>
+        value={input} onChange={(e)=>setInput(e.target.value)}></TextInput>
     </View>
   );
 };

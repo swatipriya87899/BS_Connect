@@ -14,9 +14,9 @@ const Sub_Heading = ({type,hr}) => {
 
 const styles=StyleSheet.create({
     subHeading:{
-        fontSize:18,
+        fontSize:16,
         color:color.secondaryColor,
-        fontWeight:'bold',
+        fontWeight:500,
         marginTop:15
     }
 })

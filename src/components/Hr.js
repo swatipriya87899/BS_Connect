@@ -5,7 +5,7 @@ import { color } from '../assets/color';
 const Hr = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.hr} />
+      <View style={[styles.hr]} />
     </View>
   );
 };

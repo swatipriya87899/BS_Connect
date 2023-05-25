@@ -12,7 +12,7 @@ import LeftDrawer from '../components/LeftDrawer';
 const Home = ({navigation}) => {
   // For Notify
   useEffect(() => {
-    setTimeout(showToast, 5000);
+    setTimeout(showToast, 30000);
   }, []);
 
   const showToast = () => {

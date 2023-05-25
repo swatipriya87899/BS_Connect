@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
 import React from 'react';
 import Header from '../components/Header';
 import Searchbox from '../components/Searchbox';
@@ -14,6 +14,21 @@ import { connectRequest } from '../store/reducers/statusControl';
 import { useSelector } from 'react-redux';
 
 export default function Friends({navigation}) {
+
+  const showAlert = () => {
+    Alert.alert(
+      'Sorry Buddy😔',
+      'There is not connection Request for you',
+      [
+        {
+          text: 'OK',
+          onPress: () => console.log('OK button pressed'),
+        },
+      ],
+      { cancelable: false }
+    );
+  };
+
 
   const dispatch= useDispatch();
 
@@ -35,8 +50,8 @@ export default function Friends({navigation}) {
           flexDirection: 'row',
           justifyContent: 'space-around',
         }}>
-        <TouchableOpacity onPress={()=>dispatch(nearbyFriends)}><Sub_Heading type="Nearby Friends" /></TouchableOpacity>
-        <TouchableOpacity onPress={()=>dispatch(connectRequest)}><Sub_Heading type="Connection Request" /></TouchableOpacity>
+        <TouchableOpacity onPress={()=>dispatch(nearbyFriends)}><Sub_Heading type="Nearby Friends" hr={true}/></TouchableOpacity>
+        <TouchableOpacity onPress={()=>showAlert()}><Sub_Heading type="Connection Request" hr={false} /></TouchableOpacity>
 
       </View>
 
@@ -58,10 +73,11 @@ const styles = StyleSheet.create({
 
   bottombar: {
     position: 'absolute',
-    bottom: -10,
+    bottom: -80,
     backgroundColor: color.helperColor,
-    flex: 1,
+    // flex: 1,
     width: 400,
+    height:90,
     zIndex: 3,
     paddingTop: 10,
   },
