@@ -10,7 +10,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {color} from '../assets/color';
 
-const Searchbox = () => {
+const Searchbox = ({title}) => {
   const [input, setInput] = React.useState('');
 
   return (
@@ -19,7 +19,7 @@ const Searchbox = () => {
 
       <TextInput
         style={styles.searchbox}
-        placeholder="Search Hospitals, Treatments..."
+        placeholder={title}
         value={input}></TextInput>
     </View>
   );

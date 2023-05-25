@@ -22,19 +22,19 @@ const Home = ({navigation}) => {
       text2: 'Abhishek & Neha is arround you',
       autoHide: false,
       topOffset: -50,
-      onPress:()=>navigation.navigate('Friends'),
+      onPress: () => navigation.navigate('NearbyFriends'),
     });
   };
 
   return (
     <View>
       <View style={styles.bottombar}>
-        <Bottombar navigation={navigation}/>
+        <Bottombar navigation={navigation} />
       </View>
       <ScrollView style={styles.home}>
         <Header />
         <Button_Group />
-        <Feed_Group/>
+        <Feed_Group />
         <Bottombar />
       </ScrollView>
       <Toast style={styles.notify} />

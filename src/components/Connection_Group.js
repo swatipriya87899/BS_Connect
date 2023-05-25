@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React, {useState} from 'react'
 import Connection from './Connection'
 
-const Connection_Group = () => {
+const Connection_Group = ({navigation}) => {
 
     const [student, setStudent] = useState([
         {
@@ -40,7 +40,7 @@ const Connection_Group = () => {
   return (
     <View>
       {
-        student.map((student)=><Connection name={student.name} level={student.level} photo={student.photo}/>)
+        student.map((student)=><Connection name={student.name} level={student.level} photo={student.photo} navigation={navigation}/>)
       }
     </View>
   )

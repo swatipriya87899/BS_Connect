@@ -1,9 +1,9 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {color} from '../assets/color';
 import React from 'react';
 import Button from './Button';
 
-const Connection = ({name,level, photo}) => {
+const Connection = ({name,level, photo,navigation}) => {
   return (
     <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent:'space-between'}}>
       <View style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
@@ -25,7 +25,7 @@ const Connection = ({name,level, photo}) => {
       </View>
       </View>
 
-      <Button type="Message"/>
+      <TouchableOpacity onPress={()=>navigation.navigate('Chat')}><Button type="Message"/></TouchableOpacity>
     </View>
   );
 };

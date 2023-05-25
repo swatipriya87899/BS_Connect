@@ -7,10 +7,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon5 from 'react-native-vector-icons/FontAwesome5';
 import Hr from './Hr';
 
-const Feed = ({name,level,timing, image}) => {
+const Feed = ({name,level,timing, image, postImg, messages}) => {
   // Post Message
-  const message =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur ligula vitae ipsum vehicula, at dignissim leo malesuada. Morbi id nunc nec nisi dapibus gravida.';
+  const message =messages
 
   const [showFullMessage, setShowFullMessage] = useState(false);
   const words = message.split(' ');
@@ -75,7 +74,7 @@ const Feed = ({name,level,timing, image}) => {
       </>
       <Image
         source={{
-          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI-0Lwygl3CFn1tVSQyffI9o0ILjtZwBUrnw&usqp=CAU',
+          uri: postImg,
         }}
         style={{width: '97%', height: 266, resizeMode: 'cover'}}></Image>
 

@@ -19,7 +19,7 @@ export default function Friends({navigation}) {
       </View>
 
       <ScrollView>
-      <Searchbox />
+      <Searchbox title="Search Friends..."/>
       <View
         style={{
           display: 'flex',
@@ -31,7 +31,7 @@ export default function Friends({navigation}) {
       </View>
       <Card_Group />
       <Sub_Heading type="Your Connections" />
-      <Connection_Group/>
+      <Connection_Group navigation={navigation}/>
       </ScrollView>
     </View>
   );

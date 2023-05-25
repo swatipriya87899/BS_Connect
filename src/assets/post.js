@@ -7,6 +7,7 @@ export const post = [
         time: '15 hours ago',
         message:
           'Hello Everyone, I am pleased to inform you that I have got 90% in Computation Thinking Subject, After Learnign CT form XYZ in IIT Madras, I find great Interest in CT . Thats why I thought of sharing my resources to you all. I hope it would be helpful for you all.',
+          postImg:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl137sT1kqYKRrYib7rhR15wU5hWvqT3ThVw&usqp=CAU'
       },
       {
         image:
@@ -15,6 +16,7 @@ export const post = [
         level: 'Dipoma Level',
         time: '1 day ago',
         message:
-          'Hello Everyone, I am pleased to inform you that I have got 90% in Computation Thinking Subject, After Learnign CT form XYZ in IIT Madras, I find great Interest in CT . Thats why I thought of sharing my resources to you all. I hope it would be helpful for you all.',
+          'Hello Everyone, I got great interset in Machine Learning, Today I have trained the modal for predicting the temperature & I am very happy to say that it is 95% precise',
+          postImg:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8FAjskBVqJLla4XdQoeNyaQYON2LDbclOqA&usqp=CAU'
       }
 ]
