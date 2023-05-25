@@ -12,15 +12,15 @@ const styles= StyleSheet.create({
 
 const Button_Group = () => {
   return (
-    <ScrollView horizontal>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={styles.button_group}>
-        <Button type="All"/>
+        <Button type="All" boarder={true}/>
         <Button type="Programming"/>
-        <Button type="Motivation"/>
-        <Button type="Fun"/>
-        <Button type="Memes"/>
-        <Button type="Travel"/>
-        <Button type="Hacks"/>
+        <Button type="Motivation" boarder={true}/>
+        <Button type="Fun" boarder={true}/>
+        <Button type="Memes" boarder={true}/>
+        <Button type="Travel" boarder={true}/>
+        <Button type="Hacks" boarder={true}/>
     </View>
     </ScrollView>
   )

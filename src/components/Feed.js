@@ -8,12 +8,14 @@ import Icon5 from 'react-native-vector-icons/FontAwesome5';
 import Hr from './Hr';
 
 const Feed = ({name,level,timing, image, postImg, messages}) => {
-  // Post Message
-  const message =messages
+   // Post Message
+   const message =
+   'Hello Everyone, I am pleased to inform you that I have got 90% in Computation Thinking Subject, After Learnign CT form XYZ in IIT Madras, I find great Interest in CT . Thats why I thought of sharing my resources to you all. I hope it would be helpful for you all.';
 
-  const [showFullMessage, setShowFullMessage] = useState(false);
-  const words = message.split(' ');
-  const limitedWords = words.slice(0, 10).join(' ');
+ const [showFullMessage, setShowFullMessage] = useState(false);
+ const words = message.split(' ');
+ const limitedWords = words.slice(0, 10).join(' ');
+
 
   //For liking the post
   const [isLike, setIsLike] = useState(false);
@@ -51,10 +53,8 @@ const Feed = ({name,level,timing, image, postImg, messages}) => {
             <Text style={styles.feedTiming}>{timing}</Text>
           </View>
         </View>
-        <Image
-          source={info}
-          style={styles.infoBtn}
-          resizeMode="contain"></Image>
+        <Icon name="ellipsis-v" size={30} color={color.secondaryHelperColor}/>
+
       </View>
 
       {/* Post Text */}
@@ -93,29 +93,14 @@ const Feed = ({name,level,timing, image, postImg, messages}) => {
             alignItems: 'center',
             marginVertical: 10,
           }}>
-          {isLike ? (
+         
             <Icon
-              name="heart"
+              name="hand-o-up"
               size={30}
               color="#900"
               solid={false}
-              onPress={() => {
-                setIsLike(false);
-                setLikeCount(likeCount - 1);
-              }}
             />
-          ) : (
-            <Icon
-              name="heart-o"
-              size={30}
-              color="#900"
-              solid={false}
-              onPress={() => {
-                setIsLike(true);
-                setLikeCount(likeCount + 1);
-              }}
-            />
-          )}
+         
 
           {/* Like Count */}
           <Text style={{marginLeft: 5}}>{likeCount} Likes</Text>
@@ -135,9 +120,11 @@ const Feed = ({name,level,timing, image, postImg, messages}) => {
         }}>
         {/* Like */}
         <View >
-          <Icon name="thumbs-up" size={24} color={color.secondaryHelperColor} />
+          <TouchableOpacity onPress={()=>setLikeCount(likeCount+1)}><Icon name="thumbs-up" size={24} color={color.secondaryHelperColor} /></TouchableOpacity>
           <Text>Like</Text>
         </View>
+
+        
 
         {/* Post Comment */}
         <View>

@@ -4,11 +4,11 @@ import Map from '../components/Map';
 import Header from '../components/Header';
 import Searchbox from '../components/Searchbox';
 
-export default function NearbyFriends() {
+export default function NearbyFriends({navigation}) {
   return (
     <>
     <View style={styles.nearbyFriends}> 
-      <Header/>
+      <Header navigation={navigation}/>
     </View>
     <Map/>
     <View style={styles.searchbox}><Searchbox title="Search Friends..."/></View>

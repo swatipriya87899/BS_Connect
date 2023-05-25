@@ -13,15 +13,15 @@ const Hr = () => {
 const styles = StyleSheet.create({
   container: {
     marginVertical:10,
-    flex: 1,
+    // flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
   hr: {
     borderBottomColor: color.secondaryColor,
     borderBottomWidth: 0.3,
-    width: '95%',
-    marginVertical: 10,
+    width: '90%',
+    marginVertical: 0,
   },
 });
 

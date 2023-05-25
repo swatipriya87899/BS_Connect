@@ -1,34 +1,39 @@
-import {View, Text} from 'react-native';
 import React, { useEffect, useState } from 'react';
+import { View, Text } from 'react-native';
+import axios from 'axios';
 import Feed from './Feed';
-import {post} from './../assets/post'
 
 const Feed_Group = () => {
-
   const [posts, setPosts] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("https://bsconnet.free.beeceptor.com/")
-  // .then(response => response.json())
-  // .then(data => {
-  //   console.log(data);
-  //   // Process the retrieved data here
-  // })
-  // .catch(error => {
-  //   console.error(error);
-  // });
 
-  // }, []);
-  
-  
-  
+  // Fetching the api for getting posts
+  useEffect(() => {
+    axios.get('https://bsconnect.proxy.beeceptor.com/')
+      .then(response => {
+       return setPosts(response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+
   return (
     <View>
-      {console.log(posts)}
-     {
-       post.map((e)=><Feed name={e.name} level={e.level} timing={e.timing} image={e.image} postImg={e.postImg} messages={e.message}/>)
-     }
-    </View>
+    {posts.length > 0 && posts.map((e) => (
+  <Feed
+    name={e.name}
+    level={e.level}
+    timing={e.timing}
+    image={e.image}
+    postImg={e.postImg}
+    messages={e.messages}
+  />
+))}
+
+  </View>
+  
   );
 };
 

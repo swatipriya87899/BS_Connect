@@ -31,8 +31,8 @@ const Home = ({navigation}) => {
       <View style={styles.bottombar}>
         <Bottombar navigation={navigation} />
       </View>
-      <ScrollView style={styles.home}>
-        <Header />
+      <ScrollView style={styles.home} showsVerticalScrollIndicator={false}>
+        <Header navigation={navigation}/>
         <Button_Group />
         <Feed_Group />
         <Bottombar />
